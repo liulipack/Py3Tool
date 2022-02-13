@@ -1,13 +1,20 @@
-# -*- coding: utf-8 -*-
+# _*_ coding: utf-8 _*_
+"""
+Time:     2022/02/13 18:31:35
+Author:   LiuliPack
+Version:  V 0.1
+Describe: 填盘。
+"""
+
+# 基础参数
 import os, sys, random
 
-# 定义填充大小和文件名
 FillSize = 1 * 1024 * 1024 * 1024 # 1 GB
-File = open(os.path.dirname(os.path.realpath(sys.argv[0])) + '\\test.txt', 'a')
+File = open(os.path.dirname(os.path.realpath(sys.argv[0])) + '\\Rainbow\'s End.txt', 'a')
 
 # 生成随机内容
 def rand(len):
-    chars = ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&')
+    chars = ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`!@#$%^&*()_=+[]{};:"\|,.')
     fill = ''
     for num in range(len):
         fill += random.choice(chars)
